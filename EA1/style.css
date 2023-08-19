@@ -1,0 +1,22 @@
+body{
+    background-image: url(istockphoto-1169630303-2048x2048.jpg);
+    background-size: cover;
+}
+*{
+    color: white;
+}
+a{
+    text-decoration: none;
+}
+th{
+    background-color: red;
+    text-align: left;
+}
+h1,h2{
+    text-align: right;
+}
+
+p{
+    margin-left: 100px;
+    margin-right: 100px;
+}
