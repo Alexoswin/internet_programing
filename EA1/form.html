@@ -4,20 +4,49 @@
 
     </head>
     <body>
-        <form>
-            <input type="text" placeholder=" enter your name ">
+        <form name="cust_info">
+            <input type="text" name="name" placeholder=" enter your name ">
             <br/>
-            <input type="text" placeholder="enter your email-id">
+            <input type="email" name="email" placeholder="enter your email-id">
             <br/>
-            <input type="text" placeholder="enter your hobbyies">
+            <input type="text" name="hobbyies" placeholder="enter your hobbyies">
             <br/>
-            <input type="text" placeholder="enter your address">
+            <input type="text" name="address" placeholder="enter your address">
             <br/>
-            <input type="number" placeholder="enter your age ">
+            <input type="number" name="age" placeholder="enter your age ">
             <br/>
 
             male<input type="radio" name="gender">
             female<input type="radio" name="gender">
+
+            <br/>
+            <button onclick="whenclick()">
+                submit
+            </button>
         </form>
+
+
+        <script>
+            function whenclick(){
+            let name= document.forms["cust_info"]["name"].value
+            let email= document.forms["cust_info"]["email"].value
+            let hobbyies= document.forms["cust_info"]["hobbyies"].value
+            let address= document.forms["cust_info"]["address"].value
+            let age= document.forms["cust_info"]["age"].value
+            let gender =document.forms["cust_info"]["gender"].value
+
+
+            if(name==""||email==""||hobbyies==""||address==""||age==""||gender==""){
+                alert("please enter all your details")
+                return false;
+            }
+            else if(age>100||age<18){
+                alert("age cannot be under 18 or above 100")
+            }
+           
+        }
+
+            
+        </script>
     </body>
 </html>
